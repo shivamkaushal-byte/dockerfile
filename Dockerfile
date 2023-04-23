@@ -11,6 +11,5 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y php7.4 php7.4-cli php7.4-fpm php7.4-mysql
 RUN apt-get install -y mysql-server
-ADD https://github.com/devopspractic/Polymers.git /var/www/html
 RUN service apache2 enable
 CMD ["apache2ctl", "-D", "FOREGROUND"]
